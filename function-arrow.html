@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function Arrow</title>
+  </head>
+  <body>
+    <script>
+
+      // const sayHello = (name) =>{
+      //   const say = `Hello ${name}`;
+      //   console.log(say);
+      // }
+
+      const sayHello = (name) => console.log(`Hello ${name}`);
+
+      sayHello("Labib");
+
+      // const sum = (first, second) =>{
+      //   return first + second;
+      // }
+
+      const sum = (first, second) => first + second;
+      // const sum = name => console.log(name);
+      // const sum = () => console.log(`Hallo`);
+
+
+      console.log(sum(100, 100));
+
+      function giveMeName(callback){
+        callback("Labib");
+      }
+
+      // Anonymus function
+      // giveMeName(function (name) {
+      //   console.log(`Hello ${name}`);
+      // })
+
+      // arrow Function
+      giveMeName(name => console.log(`Hello ${name}`));
+    </script>
+  </body>
+</html>

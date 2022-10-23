@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+
+      {
+        const names = ["Muhammad", "Labib", "Muyassar", "Ulhaq", "Irfan"];
+
+        // const firstName = names[0];
+        // const middleName = names[1];
+        // const lastName = names[2];
+
+        let [firstName, middleName, lastName, ...others] = names;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+        console.log(others);
+      }
+
+      {
+        const person = {
+          firstName: "Labib",
+          lastName: "Muyassar",
+          address: {
+            street: "Jalan Belum Ada",
+            city: "Purwokerto",
+            country: "Indonesia"
+          },
+          hobby:"Game",
+          channel: "Belum Ada"
+        };
+
+        // console.log(person.firstName);
+        let {firstName, lastName, address:{city, street, country}, ...others} = person;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(city);
+        console.log(street);
+        console.log(country);
+        console.log(others);
+      }
+
+      {
+        function displayPerson({firstName, middleName, lastName}){
+          console.log(firstName);
+          console.log(middleName);
+          console.log(lastName);
+        }
+
+        const person = {
+          firstName: "Muhammad",
+          middleName: "Labib",
+          lastName: "Muyassar"
+        };
+
+        displayPerson(person);
+      }
+
+      {
+        function sum([first, second]) {
+          return first + second;
+        }
+
+        console.log(sum([1, 1]));
+        console.log(sum([10,10]));
+      }
+
+      {
+        const names = [];
+        const [firstName = "Muhammad", middleName = "Labib", lastName = "Muyassar"] = names;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      {
+        const person = {
+          firstName: "Muhammad",
+          lastName: "Muyassar"
+        };
+
+        let {firstName: namaDepan,
+          middleName: namaTengah = "Labib",
+          lastName: namaBelakang} = person;
+          
+        console.log(namaDepan);
+        console.log(namaTengah);
+        console.log(namaBelakang);
+
+      }
+
+    </script>
+  </body>
+</html>

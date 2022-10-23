@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kata Kunci This</title>
+  </head>
+  <body>
+    <script>
+
+      console.log(this);
+
+      function sample(){
+        console.log(this);
+        function inner(){
+          console.log(this);
+        }
+        inner();
+      }
+
+      sample();
+
+      const person = {
+        name: "Labib",
+        sayHello: function (value){
+          console.log(`Hello ${value} My name is ${this.name}`);
+        }
+      };
+
+      person.sayHello("Muhammad");
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Continue</title>
+  </head>
+  <body>
+    <script>
+
+      let i = 2;
+      let a = 3;
+      let b = 5;
+      let c = 7;
+      let d = 2;
+      document.writeln(`<p>${d}</p>`);
+      document.writeln(`<p>${a}</p>`);
+      document.writeln(`<p>${b}</p>`);
+      document.writeln(`<p>${c}</p>`);
+      do {
+        if (i % d != 0 && i % a != 0 && i % b != 0 && i % c != 0) {
+          document.writeln(`<p>${i}</p>`);
+
+        }
+        i++;
+      } while (i < 100);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Switch Statement</title>
+  </head>
+  <body>
+    <script>
+
+      const nilai = "A";
+
+      switch (nilai) {
+        case "A":
+          document.writeln(`<p>Cumlaude</p>`);
+          break;
+        case "B":
+        case "C":
+          document.writeln(`<p>Anda Lulus</p>`);
+          break;
+        case "D":
+          document.writeln(`<p>Anda Tidak Lulus</p>`);
+          break;
+        default:
+        document.writeln(`<p>Salah Jurusan?</p>`);
+
+      }
+    </script>
+  </body>
+</html>

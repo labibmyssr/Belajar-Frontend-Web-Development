@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function Dalam Function</title>
+  </head>
+  <body>
+    <script>
+
+      function outer(){
+
+        function inner(){
+          console.log("Inner");
+        }
+
+        inner();
+        inner();
+
+      }
+
+      outer();
+      inner(); 
+    </script>
+  </body>
+</html>

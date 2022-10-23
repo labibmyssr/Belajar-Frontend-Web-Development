@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Strict Mode</title>
+  </head>
+  <body>
+    <script>
+
+      function useStrictMode(){
+        'use strict'
+        const person = {
+          firstName: "Labib"
+        };
+
+        with (person) {
+          console.log(firstName);
+        }
+      };
+      useStrictMode();
+    </script>
+  </body>
+</html>

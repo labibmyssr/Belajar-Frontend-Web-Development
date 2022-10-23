@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Operator In</title>
+  </head>
+  <body>
+    <script>
+
+      const person = {
+        firstName: "Labib",
+        lastName: "Muyassar",
+        name: undefined
+      };
+
+      if ("firstName" in person) {
+        alert(`Hallo ${person.firstName}`);
+      }else {
+        alert(`Hallo`);
+      }
+      if ("name" in person) {
+        alert(`Hallo ${person.name}`);
+      }else {
+        alert(`Hallo Student`);
+      }
+
+      const names = [null, "Labib", null];
+      const result = 0 in names;
+
+      document.writeln(`<p>${result}</p>`);
+    </script>
+  </body>
+</html>

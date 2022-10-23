@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function Reat Parameter</title>
+  </head>
+  <body>
+    <script>
+
+      function sum(name, ...data){
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} is ${total}</p>`);
+      }
+
+      sum("Orange", 10, 20, 30, 40, 50);
+      sum("Apple", 10, 20, 54, 23, 43);
+      sum("Banana", 10, 65, 23, 43, 54);
+
+      const values = [10, 10, 10, 10, 10];
+      sum("Test", ...values); // spread syntax
+
+      function oldSum(){
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>Total is ${total}</p>`);
+      }
+
+      oldSum(1,2,3,4,5);
+    </script>
+  </body>
+</html>
